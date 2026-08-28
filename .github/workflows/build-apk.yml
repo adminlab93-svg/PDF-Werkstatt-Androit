@@ -23,7 +23,7 @@ jobs:
           gradle-version: "9.4.1"
 
       - name: APK bauen
-        run: gradle :app:assembleDebug --stacktrace
+         run: gradle :app:assembleDebug --stacktrace --debug
 
       - name: APK bereitstellen
         uses: actions/upload-artifact@v4
