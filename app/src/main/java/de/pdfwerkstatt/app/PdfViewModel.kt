@@ -339,18 +339,11 @@ class PdfViewModel(application: Application) : AndroidViewModel(application) {
                             source
                         ).use { document ->
 
-                            val splitter =
-                                Splitter().apply {
-
-                                    startPage =
-                                        index + 1
-
-                                    endPage =
-                                        index + 1
-
-                                    splitAtPage =
-                                        1
-                                }
+                            val splitter = Splitter().apply {
+                                setStartPage(index + 1)
+                                setEndPage(index +1)
+                                setSplitAtPage(1)
+                            }
 
                             val pages =
                                 splitter.split(
